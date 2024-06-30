@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <style>
+        body {
+            background-color: #000000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: white;
+        }
+        .container {
+            text-align: center;
+        }
+        .happy-birthday {
+            font-size: 4rem;
+            color: #ff69b4;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4, 0 0 40px #ff69b4, 0 0 50px #ff69b4, 0 0 60px #ff69b4, 0 0 70px #ff69b4;
+        }
+        .envelope {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background: #ffebcd;
+            margin: 0 auto;
+            border-radius: 10px;
+            cursor: pointer;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .flap {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #d2691e;
+            border-radius: 0 0 10px 10px;
+            transform-origin: top;
+            transform: rotateX(0deg);
+            transition: transform 0.5s ease;
+        }
+        .envelope:hover .flap {
+            transform: rotateX(-180deg);
+        }
+        .letter {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 100%;
+            left: 0;
+            background: white;
+            border-radius: 0 0 10px 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            transform: translateY(0%);
+            transition: transform 0.5s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .envelope:hover .letter {
+            transform: translateY(-100%);
+        }
+        .message {
+            font-size: 1.5rem;
+            color: #2f4f4f;
+        }
+        .image-frame {
+            width: 300px;
+            height: auto;
+            border: 5px solid #ff69b4;
+            padding: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="happy-birthday">HAPPY BIRTHDAY</div>
+        <div class="envelope">
+            <div class="flap"></div>
+            <div class="letter">
+                <div class="message">
+                    Dear Friend,<br><br>
+                    Wishing you a day filled with love, joy, and all your favorite things.<br>
+                    Happy Birthday! 🎉🎂🥳<br><br>
+                    Best Wishes,<br>
+                    [Your Name]
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="image-frame">
+        <img src="https://media-ccu1-2.cdn.whatsapp.net/v/t61.24694-24/389194808_990320955809085_1234475805823013065_n.jpg?ccb=11-4&oh=01_Q5AaIDYRu1yYxjteNDD1rLHfgrlg4re1C-563m4io_L1b6gv&oe=668E819B&_nc_sid=e6ed6c&_nc_cat=102" alt="Framed Image">
+    </div>
+</body>
+</html>
